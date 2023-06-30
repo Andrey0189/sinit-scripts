@@ -1,6 +1,8 @@
 # sinit-scripts
 
-Collection of services for Suckless init with daemontools-encore process manager and LittKit for process ordering. Tested on Artix Linux, but can probably work on other distros.
+Collection of services for [suckless init](https://core.suckless.org/sinit/) with [daemontools-encore](http://untroubled.org/daemontools-encore/) process manager and [LittKit](http://troubleshooters.com/projects/littkit/) for process ordering. Tested on Artix Linux, but can probably work on other distros.
+
+Insipired by [this](http://troubleshooters.com/linux/diy/suckless_init_on_plop.htm) guide.
 
 ## How it works?
 
