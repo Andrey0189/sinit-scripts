@@ -4,6 +4,8 @@ Collection of services for [suckless init](https://core.suckless.org/sinit/) wit
 
 Insipired by [this](http://troubleshooters.com/linux/diy/suckless_init_on_plop.htm) guide.
 
+![megainit](./stuff/artix-sinit.png)
+
 ## How it works?
 
 1. Kernel executes `sinit` (suckless init).

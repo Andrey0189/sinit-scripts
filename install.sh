@@ -17,7 +17,7 @@ echo;
 echo " -< Copying services... >-"
 rm -rf /var/rc &> /dev/null
 mkdir /var/rc
-cp -rv ./var/rc /var/rc
+cp -rv ./var/rc /var/
 
 echo;
 echo " -< Making symlinks... >-"
@@ -41,15 +41,15 @@ cp -v ./bin/* /bin/
 echo;
 echo " -< Copying shutdown script and making symlinks... >-"
 cp -v ./sbin/* /sbin/
-ln -s /sbin/shutdown /sbin/reboot
-ln -s /sbin/shutdown /sbin/poweroff
+ln -sv /sbin/shutdown /sbin/reboot
+ln -sv /sbin/shutdown /sbin/poweroff
 
 echo;
 echo " -< Installing suckless init as default... >-"
-rm -v /sbin/init
-cp -v /usr/local/bin/sinit /sbin/init
+mv -v /sbin/init /sbin/init-old
+ln -sv /usr/local/bin/sinit /sbin/init
 
-if [ $? -eq 0]; then
+if [ $? -eq 0 ]; then
 	echo;
 	echo " -< Succeeded. Now you can reboot >-"
 fi
