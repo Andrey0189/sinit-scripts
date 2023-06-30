@@ -1,0 +1,3 @@
+#!/bin/sh
+echo Starting tty1
+exec /sbin/agetty tty1 --noclear 38400 linux

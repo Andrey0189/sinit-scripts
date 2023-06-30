@@ -1,0 +1,3 @@
+#!/bin/sh
+echo Starting tty2
+exec /sbin/agetty tty2 38400 linux

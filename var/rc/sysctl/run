@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/bin/sysctl --system
+lk_forever 3600

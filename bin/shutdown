@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [[ "$EUID" -ne 0 ]]; then
+	echo "Must be executed by root"
+	exit 1
+fi
+
+shutdown_mode=$(basename "$0")  ## CAPTURE "poweroff" or "reboot"
+if [[ $(tty) =~ /dev/tty ]]; then
+	/bin/rc.shutdown "$shutdown_mode"
+else
+	nohup bash /bin/rc.shutdown "$shutdown_mode" | tee /dev/tty1 & 
+fi

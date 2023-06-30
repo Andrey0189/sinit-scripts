@@ -1,0 +1,3 @@
+#!/bin/sh
+udevadm trigger --action=add
+lk_forever 3600

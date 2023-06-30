@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/bin/udevadm settle
+lk_forever 3600

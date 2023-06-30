@@ -1,0 +1,3 @@
+#!/bin/sh
+echo Starting tty6
+exec /sbin/agetty tty6 38400 linux

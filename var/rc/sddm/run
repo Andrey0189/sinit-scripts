@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p /var/lib/sddm
+chown -R sddm:sddm /var/lib/sddm
+exec /usr/bin/sddm
