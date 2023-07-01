@@ -13,6 +13,15 @@ Insipired by [this](http://troubleshooters.com/linux/diy/suckless_init_on_plop.h
 3. `/bin/rc.init` does some important stuff with pseudo filesystems and executes services in `/etc/rc/`.
 4. `dtinit` (daemontools init) is the first service to start in `/etc/rc/` and it executes other services in `/etc/rc/` in proper order using LittKit's `lk_runsvc`.
 
+## Adding new services
+```bash
+mkdir /var/rc/service_name
+touch /var/rc/service_name/run # main execution script for the service. Note: daemontools-encore is going to restart the service every time it finishes execution of the run file. I you want to avoid this add "lk_forever 3600" at the end of the script.
+chmod u+x /var/rc/service_name/run
+ln -s /var/rc/service_name /etc/rc/
+# Add "log 'service_name'" (optionally) and "lk_runsvc /etc/rc/service_name 0" to /etc/rc/dtinit/dtinit.sh 
+```
+
 ## Installation
 First of all, you need to install suckless init, daemontools-encore and LittKit. You can do it automatically using file `install-deps.sh`, but doing it manually is safer, if for example, you get an error during compilation.
 ```bash

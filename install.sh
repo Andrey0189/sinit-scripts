@@ -47,7 +47,8 @@ ln -sv /sbin/shutdown /sbin/poweroff
 echo;
 echo " -< Installing suckless init as default... >-"
 mv -v /sbin/init /sbin/init-old
-ln -sv /usr/local/bin/sinit /sbin/init
+cp -v /usr/local/bin/sinit /sbin/sinit
+ln -sv /sbin/sinit /sbin/init
 
 if [ $? -eq 0 ]; then
 	echo;
