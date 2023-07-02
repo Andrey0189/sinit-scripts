@@ -23,7 +23,12 @@ ln -s /var/rc/service_name /etc/rc/
 ```
 
 ## Installation
-First of all, you need to install suckless init, daemontools-encore and LittKit. You can do it automatically using file `install-deps.sh`, but doing it manually is safer, if for example, you get an error during compilation.
+First of all, clone, the repo:
+```bash
+git clone https://github.com/Andrey0189/sinit-scripts
+cd sinit-scripts/
+```
+Then you need to install suckless init, daemontools-encore and LittKit. You can do it automatically using file `install-deps.sh`, but doing it manually is safer, if for example, you get an error during compilation.
 ```bash
 # sinit
 git clone https://git.suckless.org/sinit
