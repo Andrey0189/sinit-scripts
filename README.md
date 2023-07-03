@@ -70,6 +70,6 @@ Currently only tested on these distos:
 - Artix
 - Arch
 
-Works perfectly on Artix, but elogind and udevd executables are in different places on Arch, so it must be changed to work properly. If it works on your distro, let me know in pull requests. 
+Works perfectly on Artix, but on Arch you need to install elogind and change udevd executable in the run file. If it works on your distro, let me know in pull requests. 
 
 ***
