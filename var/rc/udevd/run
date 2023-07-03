@@ -1,2 +1,7 @@
 #!/bin/sh
-/usr/bin/udevd
+
+if [ -x /usr/bin/udevd ]; then
+	/usr/bin/udevd
+else
+	/usr/lib/systemd/systemd-udevd
+fi
