@@ -55,10 +55,13 @@ sudo cp lk_* /usr/local/bin
 **I highly recommend performing the next instructions from chroot via some livecd. You can try to do this on working machine, but chroot is much safer.**
 
 
-After you installed these dependencies, you can run the installation script for services, that will replace your current init with suckless init. Of course, you have to run this script as root.
+After you installed these dependencies, you can run the installation script for services, that will replace your current init with suckless init.
 ```bash
-sudo ./install.sh
-sudo reboot
+# Assuming you are doing it from chroot
+./install.sh
+exit
+umount -R /mnt
+reboot
 ```
 If everything was done correctly, you can finally boot into your system with the suckless init!
 
