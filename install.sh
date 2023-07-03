@@ -48,7 +48,7 @@ echo;
 echo " -< Installing suckless init as default... >-"
 mv -v /sbin/init /sbin/init-old
 cp -v /usr/local/bin/sinit /sbin/sinit
-ln -sv /sbin/sinit /sbin/init
+cp -v /sbin/sinit /sbin/init
 
 if [ $? -eq 0 ]; then
 	echo;
