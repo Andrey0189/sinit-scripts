@@ -44,13 +44,13 @@ echo;
 echo "[ {} ] swapoff -a..."
 swapoff -a
 
+echo "[ {} ] Remounting filesystems as read-only..."
+echo "u" > /proc/sysrq-trigger
+sleep 3
+
 echo "[ {} ] Syncing filesystems..."
 sync
 echo "s" > /proc/sysrq-trigger
-sleep 3
-
-echo "[ {} ] Remounting filesystems as read-only..."
-echo "u" > /proc/sysrq-trigger
 sleep 3
 
 echo;
