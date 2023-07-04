@@ -31,7 +31,7 @@ files=("shutdown" "reboot" "poweroff")
 for file in "${files[@]}"
 do
   filename=$(basename "$file")
-  mv -v /sbin/"$file" "$file-old"
+  mv -v /sbin/"$file" /sbin/"$file-old"
 done
 
 echo;
