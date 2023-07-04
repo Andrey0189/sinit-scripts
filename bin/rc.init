@@ -58,7 +58,7 @@ echo "Setting up hostname..."
 [ "$HOSTNAME" ] && echo "$HOSTNAME" >| /proc/sys/kernel/hostname
 
 echo;
-echo "Startng daemontools-encore..."
+echo "Starting daemontools-encore..."
 
 lk_prepare /etc/rc
 # svc -dx /etc/rc/* /etc/rc/*/log > /dev/null 2>&1
