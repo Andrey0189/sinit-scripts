@@ -33,6 +33,9 @@ lk_runsvc /etc/rc/tty4 0
 lk_runsvc /etc/rc/tty5 0
 lk_runsvc /etc/rc/tty6 0
 
+log "alsa_without_udev_fix"
+lk_runsvc /etc/rc/alsa-wo-udev 0
+
 # Uncomment if needed
 # lk_runsvc /etc/rc/sddm 0
 

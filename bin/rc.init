@@ -58,6 +58,8 @@ echo "Setting up hostname..."
 [ "$HOSTNAME" ] && echo "$HOSTNAME" >| /proc/sys/kernel/hostname
 
 echo;
+mount -o remount /
+echo;
 echo "Starting daemontools-encore..."
 
 lk_prepare /etc/rc
